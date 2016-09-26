@@ -14,7 +14,7 @@ sleep 60
 
 #Optimal dex2oat threads for faster app installation#
 setprop ro.sys.fw.dex2oat_thread_count 4
-setprop #Use 4 thread to improve dex2oat time#
+#Use 4 thread to improve dex2oat time#
 setprop dalvik.vm.dex2oat-thread_count 4
 setprop dalvik.vm.dex2oat-threads 4
 #
