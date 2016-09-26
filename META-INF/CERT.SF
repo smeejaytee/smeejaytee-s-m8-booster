@@ -1,0 +1,19 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: YJeGfwv+ewYRMQWdlmrq3iOiFqM=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: zkMlRHmQD6eUTzFPdOaF4y+keDY=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: tLgBaUmk0ImSlk+t55uvNZlijaA=
+
+Name: etc/ad_calib.cfg
+SHA1-Digest: 2gCLdTjQI+6CKaYqt30dZEAhyNo=
+
+Name: smeejaytee_tweak.prop
+SHA1-Digest: XLoxjIKgIBbr4BP2vifVvus4lJ4=
+
+Name: su.d/smeejay_setprop
+SHA1-Digest: cmW22BOdCTULN4+yH/6W8+xZhjo=
+

@@ -1,0 +1,144 @@
+##                                      ##
+##  Smeejaytee's M8 Booster tweak.prop  ##
+##                                      ##
+##           @ XDA Developers           ##
+##                                      ##
+
+BACKUP=y
+
+## system tweaks ##
+
+#
+ro.ril.enable.a52=1
+ro.ril.enable.a53=1 
+# Allow purge of assets to free more ram
+persist.sys.purgeable_assets=1
+dalvik.vm.dex2oat-Xmx=768m
+dalvik.vm.heapsize=768m
+dalvik.vm.dexopt-flags=m=v,o=y
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.verify-bytecode=false
+persist.service.pcsync.enable=0
+ro.core_ctl_max_cpu=4.               
+ro.core_ctl_min_cpu=1 
+#faster youtube#
+ro.ril.hep=0
+persist.sys.shutdown.mode=hibernate
+ro.config.hw_fast_dormancy=1
+# Sensor Sleep Control
+ro.ril.sensor.sleep.control=1
+persist.sys.use_dithering=1
+ro.telephony.call_ring.delay=0
+view.scroll_friction=10
+debug.performance.tuning=1
+windowsmgr.max_events_per_sec=300
+wifi.supplicant_scan_interval=180
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+ro.min_pointer_dur=8
+ro.secure=0
+persist.sys.use_16bpp_alpha=1
+ro.product.gpu.driver=1
+touch.presure.scale=0.001
+persist.sys.NV_FPSLIMIT=60
+persist.sys.NV_POWERMODE=1
+persist.sys.NV_PROFVER=15
+persist.sys.NV_STEREOCTRL=0
+persist.sys.NV_STEREOSEPCHG=0
+persist.sys.NV_STEREOSEP=20
+#Qualcomm tweaks#
+com.qc.hardware=true
+debug.qc.hardware=true
+debug.qctwa.preservebuf=1
+debug.qctwa.statusbar=1
+pm.sleep_mode=1
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+ro.vold.umsdirtyratio=20
+ro.ril.hsxpa=2 
+ro.ril.gprs 
+ro.ril.hep=1 
+ro.ril.enable.dtm=1 
+ro.ril.hsdpa.category=10 
+ro.ril.enable.3g.prefix=1 
+ro.ril.htcmaskw1.bitmask=4294967295 
+ro.ril.htcmaskw1=14449 
+ro.ril.hsupa.category=5
+
+#Faster video streaming#
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-rtsp=true
+media.stagefright.enable-record=false
+
+#Disable error reporting#
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+ro.config.nocheckin=1
+ro.kernel.android.checkjni=0
+
+#Better net speeds.
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
+net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,1048576
+#
+
+# Wireless Tweaks
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_ecn=0
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_mem=187000 187000 187000
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_rmem=4096 39000 187000
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_wmem=4096 39000 18700
+
+# Support For IPV4 and IPV6
+persist.telephony.support.ipv6=1
+persist.telephony.support.ipv4=1
+#
+
+#Trim properties.
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.empty_app_percent=100
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_cache_percent=100
+ro.sys.fw.trim_enable_memory=2147483648
+#
+
+# Assertive Display
+ro.qcom.ad=1
+ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
+#
+
+#
+##art tweaks only for kk with art enabled lollipop and marshmallow##
+
+#
+art.vm.heapstartsize=8m
+art.vm.heapgrowthlimit=192m
+art.vm.heapsize=768m
+art.vm.heaptargetutilization=0.75
+art.vm.heapminfree=2m
+art.vm.heapmaxfree=8m
+art.vm.dexopt-flags=m=v,o=y
+#Use 4 thread to improve dex2oat time
+art.vm.dex2oat-thread_count=4
+art.vm.dex2oat-threads=4
+art.vm.dex2oat-swap=false
+art.vm.verify-bytecode=false
+
+#
