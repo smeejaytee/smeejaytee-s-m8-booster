@@ -18,12 +18,10 @@ dalvik.vm.heapsize=768m
 dalvik.vm.dexopt-flags=m=v,o=y
 dalvik.vm.dex2oat-swap=false
 dalvik.vm.verify-bytecode=false
-persist.service.pcsync.enable=0
 ro.core_ctl_max_cpu=4.               
 ro.core_ctl_min_cpu=1 
 #faster youtube#
 ro.ril.hep=0
-persist.sys.shutdown.mode=hibernate
 ro.config.hw_fast_dormancy=1
 # Sensor Sleep Control
 ro.ril.sensor.sleep.control=1
