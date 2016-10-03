@@ -1,27 +1,32 @@
 #!/system/bin/sh
 ##                                      ##
-##          smeejaytee's_art_tweaks_setprop        ##
+##          smeejaytee's_booster_prop       ##
 ##                                      ##
 ##            XDA Developers            ##
 ##                                      ##
 
-LOG_FILE=/data/local/tp_run.log;
+LOG_FILE="/data/local/tp_run.log"
+( while [ "$(getprop sys.boot_completed)" != 1 ]; do
+sleep 20
+done
 
-sleep 60
-
-#
-##system tweaks## 
 
 #Optimal dex2oat threads for faster app installation#
 setprop ro.sys.fw.dex2oat_thread_count 4
 #Use 4 thread to improve dex2oat time#
 setprop dalvik.vm.dex2oat-thread_count 4
 setprop dalvik.vm.dex2oat-threads 4
-#
+
 
 if [ -e /data/local/tp_run.log ]; then
     rm /data/local/tp_run.log
 fi
 echo "TweakProp script has run successfully $(date +"%m-%d-%Y %H:%M:%S")" | tee -a $LOG_FILE;
+
+echo val
+
+) &
+
+echo lalakjd
 
 exit 0
