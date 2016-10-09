@@ -5,11 +5,11 @@
 ##            XDA Developers            ##
 ##                                      ##
 
-LOG_FILE="/data/local/tp_run.log"
 ( while [ "$(getprop sys.boot_completed)" != 1 ]; do
 sleep 20
 done
 
+LOG_FILE="/data/local/tp_booster_log"
 
 #Optimal dex2oat threads for faster app installation#
 setprop ro.sys.fw.dex2oat_thread_count 4

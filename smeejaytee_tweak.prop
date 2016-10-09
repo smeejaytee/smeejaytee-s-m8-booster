@@ -13,8 +13,7 @@ ro.ril.enable.a52=1
 ro.ril.enable.a53=1 
 # Allow purge of assets to free more ram
 persist.sys.purgeable_assets=1
-dalvik.vm.dex2oat-Xmx=768m
-dalvik.vm.heapsize=768m
+dalvik.vm.dex2oat-Xmx=596m
 dalvik.vm.dexopt-flags=m=v,o=y
 dalvik.vm.dex2oat-swap=false
 dalvik.vm.verify-bytecode=false
@@ -31,14 +30,13 @@ view.scroll_friction=10
 debug.performance.tuning=1
 windowsmgr.max_events_per_sec=300
 wifi.supplicant_scan_interval=180
-ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
+ro.max.fling_velocity=9000
+ro.min.fling_velocity=6000
 ro.min_pointer_dur=8
 ro.secure=0
 persist.sys.use_16bpp_alpha=1
 ro.product.gpu.driver=1
 touch.presure.scale=0.001
-persist.sys.NV_FPSLIMIT=60
 persist.sys.NV_POWERMODE=1
 persist.sys.NV_PROFVER=15
 persist.sys.NV_STEREOCTRL=0
@@ -111,7 +109,7 @@ persist.telephony.support.ipv4=1
 
 #Trim properties.
 ro.sys.fw.use_trim_settings=true
-ro.sys.fw.empty_app_percent=100
+ro.sys.fw.empty_app_percent=70
 ro.sys.fw.trim_empty_percent=100
 ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=2147483648
@@ -122,21 +120,41 @@ ro.qcom.ad=1
 ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
 #
 
+#HWUI properties
+ro.hwui.texture_cache_size=90
+ro.hwui.layer_cache_size=60
+ro.hwui.r_buffer_cache_size=10
+ro.hwui.path_cache_size=40
+ro.hwui.gradient_cache_size=2
+ro.hwui.drop_shadow_cache_size=8
+ro.hwui.texture_cache_flushrate=0.6
+ro.hwui.text_small_cache_width=1280
+ro.hwui.text_small_cache_height=1280
+ro.hwui.text_large_cache_width=2560
+ro.hwui.text_large_cache_height=2560
+ro.hwui.texture_cache_size=60
+
 #
 ##art tweaks only for kk with art enabled lollipop and marshmallow##
 
 #
-art.vm.heapstartsize=8m
-art.vm.heapgrowthlimit=192m
-art.vm.heapsize=768m
-art.vm.heaptargetutilization=0.75
-art.vm.heapminfree=2m
-art.vm.heapmaxfree=8m
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.heapsize=576m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=10m
+dalvik.vm.heapmaxfree=10m
+dalvik.vm.heapminfree=4m
+art.vm.heapstartsize=10m
+art.vm.heapgrowthlimit=256m
+art.vm.heapsize=596m
+art.vm.heapminfree=4m
+art.vm.heapmaxfree=10m
 art.vm.dexopt-flags=m=v,o=y
 #Use 4 thread to improve dex2oat time
 art.vm.dex2oat-thread_count=4
 art.vm.dex2oat-threads=4
 art.vm.dex2oat-swap=false
 art.vm.verify-bytecode=false
+
 
 #
