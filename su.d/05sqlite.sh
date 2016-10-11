@@ -2,14 +2,13 @@
 
 LOG_FILE="/data/local/sqlite_log"
 counter="/data/local/counter"
-busybox=/system/xbin/busybox
+busybox="/system/xbin/busybox"
+sqlite="/system/xbin/sqlite3"
 
 if [ ! -f $LOG_FILE ]; then
   touch $LOG_FILE
   chmod 775 $LOG_FILE
 fi
-
-sqlite="/system/xbin/sqlite3"
 
 if [ -z $counter ]; then
   echo 0 > $counter
@@ -24,9 +23,8 @@ else
 fi
 
 if [ $vac = "1" ]; then
-
   if [ $sqlite ]; then
-      echo "* SQLite Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" > $LOG_FILE
+      echo "* SQLite Tweaks Starting at $( date +"%m-%d-%Y %H:%M:%S" )" > $LOG_FILE
 
       echo "SQLite database VACUUM and REINDEX started at $( date +"%m-%d-%Y %H:%M:%S" )" >> $LOG_FILE
       for i in `busybox find /d* -iname "*.db"`; do
@@ -50,10 +48,10 @@ if [ $vac = "1" ]; then
       echo "0" > $counter
       echo "* SQLite Tweaks Finished At $( date +"%m-%d-%Y %H:%M:%S" )" >> $LOG_FILE
   else
-    echo No sqlite3 at xbin
+    echo "No sqlite3 at xbin"
   fi
 else
-  echo Its not chore day, no vacuuming
+  echo "It's not a day to vacuum"
 fi
 
 
