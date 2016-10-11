@@ -15,6 +15,7 @@ busybox sysctl -w vm.laptop_mode=0;
 busybox sysctl -w vm.lowmem_reserve_ratio='8 8';
 busybox sysctl -w vm.extfrag_threshold=750;
 busybox sysctl -w vm.oom_kill_allocating_task=1;
+busybox sysctl -w vm.page-cluster=4;
 ( while [ "$(getprop sys.boot_completed)" != 1 ]; do
 sleep 20
 done
