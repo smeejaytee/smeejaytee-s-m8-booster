@@ -7,24 +7,15 @@
 BACKUP=y
 
 ## system tweaks ##
-
-#
 ro.ril.enable.a52=1
-ro.ril.enable.a53=1 
-# Allow purge of assets to free more ram
-persist.sys.purgeable_assets=1
-dalvik.vm.dex2oat-Xmx=596m
-dalvik.vm.dexopt-flags=m=v,o=y
-dalvik.vm.dex2oat-swap=false
-dalvik.vm.verify-bytecode=false
-ro.core_ctl_max_cpu=4.               
-ro.core_ctl_min_cpu=1 
+ro.ril.enable.a53=1
+ro.core_ctl_max_cpu=4
+ro.core_ctl_min_cpu=1
 #faster youtube#
 ro.ril.hep=0
 ro.config.hw_fast_dormancy=1
 # Sensor Sleep Control
 ro.ril.sensor.sleep.control=1
-persist.sys.use_dithering=1
 ro.telephony.call_ring.delay=0
 view.scroll_friction=10
 debug.performance.tuning=1
@@ -34,7 +25,6 @@ ro.max.fling_velocity=9000
 ro.min.fling_velocity=6000
 ro.min_pointer_dur=8
 ro.secure=0
-persist.sys.use_16bpp_alpha=1
 ro.product.gpu.driver=1
 touch.presure.scale=0.001
 persist.sys.NV_POWERMODE=1
@@ -85,7 +75,6 @@ net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
 net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
 net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
 net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,1048576
-#
 
 # Wireless Tweaks
 net.ipv4.ip_no_pmtu_disc=0
@@ -105,7 +94,6 @@ net.ipv4.tcp_wmem=4096 39000 18700
 # Support For IPV4 and IPV6
 persist.telephony.support.ipv6=1
 persist.telephony.support.ipv4=1
-#
 
 #Trim properties.
 ro.sys.fw.use_trim_settings=true
@@ -113,12 +101,10 @@ ro.sys.fw.empty_app_percent=70
 ro.sys.fw.trim_empty_percent=100
 ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=2147483648
-#
 
 # Assertive Display
 ro.qcom.ad=1
 ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
-#
 
 #HWUI properties
 ro.hwui.texture_cache_size=90
@@ -134,16 +120,7 @@ ro.hwui.text_large_cache_width=2560
 ro.hwui.text_large_cache_height=2560
 ro.hwui.texture_cache_size=60
 
-#
 ##art tweaks only for kk with art enabled lollipop and marshmallow##
-
-#
-dalvik.vm.execution-mode=int:jit
-dalvik.vm.heapsize=576m
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapstartsize=10m
-dalvik.vm.heapmaxfree=10m
-dalvik.vm.heapminfree=4m
 art.vm.heapstartsize=10m
 art.vm.heapgrowthlimit=256m
 art.vm.heapsize=596m
@@ -156,5 +133,14 @@ art.vm.dex2oat-threads=4
 art.vm.dex2oat-swap=false
 art.vm.verify-bytecode=false
 
-
-#
+# Dalvik VM tweaks
+dalvik.vm.dex2oat-Xmx=596m
+dalvik.vm.dexopt-flags=m=v,o=y
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.heapsize=576m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=10m
+dalvik.vm.heapmaxfree=10m
+dalvik.vm.heapminfree=4m
