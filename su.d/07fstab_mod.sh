@@ -1,4 +1,5 @@
 #!/system/bin/sh
+LOG_FILE="/data/local/07fstab_log"
 mount -o rw,remount -t auto /system
 
 # Create backup if we don't have it
@@ -25,3 +26,4 @@ rm /etc/fstab.swapr
 fi
 
 mount -o ro,remount -t auto /system
+echo "07fstab has run successfully" | tee -a $LOG_FILE
