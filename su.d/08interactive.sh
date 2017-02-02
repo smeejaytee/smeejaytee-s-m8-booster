@@ -7,7 +7,7 @@ LOG_FILE="/data/local/interactive_log"
 sleep 20
 done
 GOVERNOR="interactive"
-
+su chmod 644
 echo $GOVERNOR > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo $GOVERNOR > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
 echo $GOVERNOR > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
@@ -25,7 +25,7 @@ echo "1" > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
 
 echo "40000" > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
 
-echo "85 1500000:90 1800000:70" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+echo "85 1500000:90 1800000:70" > /sys/devices/system/cpu/cpufreq/interactive/target_loawds
 
 echo "30000" > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
 
