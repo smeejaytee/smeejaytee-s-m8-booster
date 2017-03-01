@@ -37,9 +37,9 @@ com.qc.hardware=true
 debug.qc.hardware=true
 debug.qctwa.preservebuf=1
 debug.qctwa.statusbar=1
-pm.sleep_mode=1
-power.saving.mode=1
-ro.ril.disable.power.collapse=0
+pm.sleep_mode=2
+power.saving.mode=2
+ro.ril.disable.power.collapse=2
 ro.vold.umsdirtyratio=20
 ro.ril.hsxpa=2 
 ro.ril.gprs 

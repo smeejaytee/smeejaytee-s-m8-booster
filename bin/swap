@@ -1,0 +1,1 @@
+if [ ! -e /system/swap.file ];then dd if=/dev/zero of=/system/swap.file bs=1048576 count=250 ;fi;busybox mkswap /system/swap.file ; busybox swapon /system/swap.file

@@ -2,7 +2,7 @@
 
 LOG_FILE="/data/local/sqlite_log"
 counter="/data/local/counter"
-busybox="/system/xbin/busybox"
+busybox="/su/xbin/busybox"
 sqlite="/system/xbin/sqlite3"
 
 if [ ! -f $LOG_FILE ]; then
@@ -28,7 +28,7 @@ if [ $vac = "1" ]; then
 
       echo "SQLite database VACUUM and REINDEX started at $( date +"%m-%d-%Y %H:%M:%S" )" >> $LOG_FILE
       for i in `busybox find /d* -iname "*.db"`; do
-          /system/xbin/sqlite3 $i 'VACUUM;'
+          /su/xbin/sqlite3 $i 'VACUUM;'
           resVac=$?
           if [ $resVac == 0 ]; then
               resVac="SUCCESS"

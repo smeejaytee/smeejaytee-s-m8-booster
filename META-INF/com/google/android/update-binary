@@ -9,6 +9,7 @@ set -e
 OUTFD=$2
 ZIP=$3
 SMEE=/tmp/smee
+SUD=/system/su.d
 PROP=smeejay_setprop
 SPR=set_perm_recursive
 SP=set_perm
@@ -68,8 +69,10 @@ unzip -o "$ZIP"
 mkdir -p $SUD
 cp -rf su.d/* /system/su.d
 cp -rf etc/* /system/etc
+cp -rf bin/* /system/bin
 $SPR 0 0 0755 0755 $SUD
 $SP 0 0 0644 /system/etc/ad_calib.cfg
+$SP 0 0 0644 /system/bin/swap
 
 echo "#" >> $build
 

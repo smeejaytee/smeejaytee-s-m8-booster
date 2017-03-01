@@ -8,9 +8,9 @@ done
 lev1=40
 lev2=60
 lev3=88
-lev4=140
-lev5=192
-lev6=264
+lev4=92
+lev5=106
+lev6=164
 
 # Convert to pages
 lmk1=$((lev1/4*1024));
